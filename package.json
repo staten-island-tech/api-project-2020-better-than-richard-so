@@ -1,7 +1,6 @@
 {
   "name": "api-project-2020-better-than-richard-so",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "bundler": "^0.8.0",
@@ -24,5 +23,6 @@
   "bugs": {
     "url": "https://github.com/staten-island-tech/api-project-2020-better-than-richard-so/issues"
   },
-  "homepage": "https://github.com/staten-island-tech/api-project-2020-better-than-richard-so#readme"
+  "homepage": "https://github.com/staten-island-tech/api-project-2020-better-than-richard-so#readme",
+  "description": ""
 }
