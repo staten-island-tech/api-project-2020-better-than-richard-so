@@ -1,21 +1,64 @@
 <html lang="en">
-
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <title>API</title>
     <link rel="stylesheet" type="text/css" href="/style.97fcb138.css">
-<script src="/style.97fcb138.js"></script></head>
+  <script src="/style.97fcb138.js"></script></head>
 
-<body>
-    <section class="header">Better Than Richard So!</section>
+  <body>
+    <section class="first-section">
+      <h1>Air Quality On a Map</h1>
+      <h3>Better than Richard So</h3>
+      <input type="text" placeholder="Search for a city..." id="citySearch">
+    </section>
+
+    <div class="row">
+      <div class="column">
+        <div class="card">
+          <h3>City: ${selectedCity}</h3>
+          <p>Air Quality: ${}</p>
+          <div class="w3-light-grey">
+            <div class="w3-container w3-green w3-center" style="width: 25%">
+              Good
+            </div>
+          </div>
+          <p>Weather: ${temperature} °C</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>City:</h3>
+          <p>Air Quality:</p>
+          <div class="w3-light-grey">
+            <div class="w3-container w3-yellow w3-center" style="width: 50%">
+              Okay
+            </div>
+          </div>
+          <p>Weather:</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <div class="card">
+          <h3>City:</h3>
+          <p>Air Quality:</p>
+          <div class="w3-light-grey">
+            <div class="w3-container w3-red w3-center" style="width: 75%">
+              Bad
+            </div>
+          </div>
+          <p>Weather:</p>
+        </div>
+      </div>
+    </div>
+
     <!-- <div id="map"></div> -->
-    <input type="text" id="citySearch">
-
     <script src="/js.00a46daa.js"></script>
-<!-- <script async defer
+    <!-- <script async defer
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCe7b8rhWyN48zUg-8vnAOqPVuUBUtK8So&callback=initMap"></script> -->
-</body>
-
-
+  </body>
 </html>
