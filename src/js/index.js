@@ -1,49 +1,54 @@
 console.log("connected!")
 import "regenerator-runtime/runtime";
+import { DOMSelectors } from "./DOM";
 
-const init = async function () {
+const init =  function () {
+    let stateValue;
+    let cityValue;
     var apiKey = `ed8cca7e-4108-448e-9918-ef163cfb32af`;
-    var userInput = document.getElementById("citySearch");
-    userInput.addEventListener('keyup', (e) => {
-        console.log(userInput.value)
+
+    DOMSelectors.submitBtn.addEventListener('click', function () {
+        if (DOMSelectors.stateInput.value == "") {
+            // document.querySelector(".typerError").innerHTML = "";
+            document.querySelector(".typeError").insertAdjacentHTML("afterbegin", "Type in value for state");
+            // return false;
+        } else if (DOMSelectors.cityInput.value == "") {
+            // document.querySelector(".typerError").innerHTML = "";
+            document.querySelector(".typeError").insertAdjacentHTML("afterbegin", "Type in value for city");
+        }
+        else {
+            stateValue = DOMSelectors.stateInput.value;
+            cityValue = DOMSelectors.cityInput.value;
+            console.log(stateValue, cityValue);
+        }
+
+        grabData();
+
     })
     
-    // const defaultQuery = `https://api.airvisual.com/v2/city?city=${userInput}state=California&country=USA&key=${apiKey}`;
-    const defaultQuery = `https://api.airvisual.com/v2/city?city=Los Angeles&state=California&country=USA&key=${apiKey}`;
-    // const searchQuery = `https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&language=en-US&query=${search}&page=${page}&include_adult=false`;
-
-    try {
-        const response = await fetch(defaultQuery);
-        const data = await response.json();
-        console.log(data);
+    const grabData = async function () {
+        const defaultQuery = `https://api.airvisual.com/v2/nearest_city?key=${apiKey}`;
+        const searchQuery = `https://api.airvisual.com/v2/city?city=${cityValue}&state=${stateValue}&country=USA&key=${apiKey}`;
         
+        try {
+            const response = await fetch(searchQuery);
+            const data = await response.json();
+            console.log(data);
+            // display(data.results);
+            // document.querySelector(".typeError").insertAdjacentHTML("afterbegin", data.results);
+            // console.log(data.city);
+    
+        } catch (error) {
+            console.log(error);
 
-    } catch (error) {
-        console.log(error);
+        }
+    
     }
 
     //if statement for air quality color
     //if between 0-50 = green     value/200 = %width
     //if between 51-150 = yellow  value /200  = %width
     //if above 151 = red          value/200 = %width
-
-
 };
 
 init();
-
-// // The map, centered at Uluru
-    // var map = new google.maps.Map(document.getElementById("map"), {
-    //     zoom: 4,
-    //     center: uluru,
-    // });
-
-    // var uluru = {
-    //     lat: -25.344,
-    //     lng: 131.036
-    // };
-    // // The marker, positioned at Uluru
-    // var marker = new google.maps.Marker({
-    //     position: uluru,
-    //     map: map,
-    // });
