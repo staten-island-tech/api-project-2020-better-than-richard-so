@@ -1,10 +1,11 @@
 html,
 body {
   box-sizing: border-box;
-  padding: 0;
+  padding: 1rem;
   margin: 0;
   background-color: rgb(255, 205, 205);
   text-align: center;
+  font-family: 'Texturina', serif !important;
   //   font-family: "Times New Roman", Times, serif !important;
   // font-size: 62.5%;
 }
@@ -13,20 +14,61 @@ body {
 }
 
 .first-section {
-  margin: 1rem;
+  margin-bottom: 3rem;
 }
-/* Float four columns side by side */
+
+h1 {
+    font-family: 'Texturina', serif !important;
+    //   text-transform: uppercase;
+    text-decoration: underline;
+    // font-weight: bold;
+      font-size: 3rem;
+  };
+  h3 {
+    font-family: 'Texturina', serif !important;
+    margin-top: 0;
+  }
+
+  span {
+    //   font-size: smaller;
+      text-decoration: underline;
+    //   font-style: italic !important;
+      font-weight: normal !important ;
+      
+      text-transform: none;
+  }
+
+#row {
+    display: grid;
+    grid-gap: 2rem;
+}
 .column {
   //   float: left;
   //   width: 50%;
+  width: 100%;
   margin: auto;
   max-width: 50rem;
-  padding: 2rem;
-  border-radius: 2rem;
+//   padding: 2rem;
+  .card {
+    border-radius: 2rem;
+    padding: 3rem;
+  }
 
   div {
     color: white;
     font-weight: bold;
+  }
+
+  h3 {
+    font-family: 'Texturina', serif !important;
+    
+    text-transform: uppercase;
+  }
+
+  p {
+      margin: 0.5rem;
+      
+      
   }
 }
 
