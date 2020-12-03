@@ -15,6 +15,10 @@ body {
 
 .first-section {
   margin-bottom: 3rem;
+
+  h3 {
+    font-style: italic;
+  }
 }
 
 h1 {
@@ -30,9 +34,7 @@ h1 {
   }
 
   span {
-    //   font-size: smaller;
       text-decoration: underline;
-    //   font-style: italic !important;
       font-weight: normal !important ;
       
       text-transform: none;
@@ -43,53 +45,33 @@ h1 {
     grid-gap: 2rem;
 }
 .column {
-  //   float: left;
-  //   width: 50%;
   width: 100%;
   margin: auto;
   max-width: 50rem;
 //   padding: 2rem;
   .card {
+    text-align: left;
     border-radius: 2rem;
     padding: 3rem;
+    font-size: 1.2rem;
   }
 
-  div {
-    color: white;
-    font-weight: bold;
-  }
+  // div {
+  //   color: rgb(131, 131, 180);
+  // }
 
   h3 {
     font-family: 'Texturina', serif !important;
-    
+    text-align: center;
     text-transform: uppercase;
+    font-size: 2rem;
+    
+    color: rgb(255, 255, 255);
   }
 
   p {
       margin: 0.5rem;
-      
-      
-  }
-}
-
-// /* Remove extra left and right margins, due to padding */
-// .row {
-//     margin: 0;
-// }
-
-/* Clear floats after the columns */
-// .row:after {
-//   content: "";
-//   display: table;
-//   clear: both;
-// }
-
-/* Responsive columns */
-@media screen and(max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
+      color: rgb(255, 255, 255);
   }
 }
 
@@ -99,6 +81,7 @@ h1 {
   padding: 16px;
   text-align: center;
   background-color: #6490ca;
+  background-image: url(../src/media/bluesky.jpg);
 }
 
 .w3-light-grey,
