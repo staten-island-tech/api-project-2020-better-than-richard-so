@@ -1,22 +1,33 @@
 html,
 body {
-    box-sizing: border-box;
-    padding: 0;
-    margin: 0;
-    // font-size: 62.5%;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  background-color: rgb(255, 205, 205);
+  text-align: center;
+  //   font-family: "Times New Roman", Times, serif !important;
+  // font-size: 62.5%;
 }
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-.first-section{
-    margin: 1rem;
+.first-section {
+  margin: 1rem;
 }
 /* Float four columns side by side */
 .column {
-    float: left;
-    width: 50%;
-    padding: 1rem;
+  //   float: left;
+  //   width: 50%;
+  margin: auto;
+  max-width: 50rem;
+  padding: 2rem;
+  border-radius: 2rem;
+
+  div {
+    color: white;
+    font-weight: bold;
+  }
 }
 
 // /* Remove extra left and right margins, due to padding */
@@ -25,44 +36,44 @@ body {
 // }
 
 /* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
+// .row:after {
+//   content: "";
+//   display: table;
+//   clear: both;
+// }
 
 /* Responsive columns */
 @media screen and(max-width: 600px) {
-    .column {
-        width: 100%;
-        display: block;
-        margin-bottom: 20px;
-    }
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
 }
 
 /* Style the counter cards */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    padding: 16px;
-    text-align: center;
-    background-color: #6490ca;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #6490ca;
 }
 
 .w3-light-grey,
 .w3-hover-light-grey:hover,
 .w3-light-gray,
 .w3-hover-light-gray:hover {
-    color: #000 !important;
-    background-color: rgba(255, 255, 255, 0.87) !important;
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.87) !important;
 }
 /* Set the size of the div element that contains the map */
 #map {
-    height: 400px;
-    /* The height is 400 pixels */
-    width: 100%;
-    /* The width is the width of the web page */
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
 }
 
-.typeError{
-    color: red;
+.typeError {
+  color: red;
 }
