@@ -1,0 +1,104 @@
+html,
+body {
+  box-sizing: border-box;
+  padding: 1rem;
+  margin: 0;
+  background-color: rgb(255, 205, 205);
+  text-align: center;
+  font-family: 'Texturina', serif !important;
+  //   font-family: "Times New Roman", Times, serif !important;
+  // font-size: 62.5%;
+}
+* {
+  box-sizing: border-box;
+}
+
+.first-section {
+  margin-bottom: 3rem;
+
+  h3 {
+    font-style: italic;
+  }
+}
+
+h1 {
+    font-family: 'Texturina', serif !important;
+    //   text-transform: uppercase;
+    text-decoration: underline;
+    // font-weight: bold;
+      font-size: 3rem;
+  };
+  h3 {
+    font-family: 'Texturina', serif !important;
+    margin-top: 0;
+  }
+
+  span {
+      text-decoration: underline;
+      font-weight: normal !important ;
+      
+      text-transform: none;
+  }
+
+#row {
+    display: grid;
+    grid-gap: 2rem;
+}
+.column {
+  width: 100%;
+  margin: auto;
+  max-width: 50rem;
+//   padding: 2rem;
+  .card {
+    text-align: left;
+    border-radius: 2rem;
+    padding: 3rem;
+    font-size: 1.2rem;
+  }
+
+  // div {
+  //   color: rgb(131, 131, 180);
+  // }
+
+  h3 {
+    font-family: 'Texturina', serif !important;
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 2rem;
+    
+    color: rgb(255, 255, 255);
+  }
+
+  p {
+      margin: 0.5rem;
+      color: rgb(255, 255, 255);
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  text-align: center;
+  background-color: #6490ca;
+  background-image: url(../src/media/bluesky.jpg);
+}
+
+.w3-light-grey,
+.w3-hover-light-grey:hover,
+.w3-light-gray,
+.w3-hover-light-gray:hover {
+  color: #000 !important;
+  background-color: rgba(255, 255, 255, 0.87) !important;
+}
+/* Set the size of the div element that contains the map */
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
+.typeError {
+  color: red;
+}
